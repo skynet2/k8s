@@ -8,11 +8,21 @@ set -e
 
 PATCH=.ingress_coredns.patch
 COREDNS_CM=.coredns.bak.json
-
 # List of services used to generate domain names
 mapfile -t SERVICES < service_list.txt
 
+SERVICES2=()
+
+for srv in ${SERVICES[@]}; do
+  srv=$(echo "$srv"|tr -d '\r\n'|tr -d '\n')
+  if [[ $srv ]]; then
+    SERVICES2+=($srv)
+  fi;
+done
+SERVICES=( "${SERVICES2[@]}" )
+
 MINIKUBE_IP=$( minikube ip )
+: ${DOMAIN:=trustbloc.dev}
 
 generate_host_entries() {
     for service in ${SERVICES[@]}; do

@@ -15,7 +15,11 @@ if [ "${KEYS_OUTPUT_DIR}x" == "x" ]; then
     exit 1
 fi
 
-cd /opt/workspace
+if [[ "$OSTYPE" == "win32" ]]; then
+  echo "using local"
+else
+  cd /opt/workspace
+fi
 
 mkdir -p ${KEYS_OUTPUT_DIR}
 

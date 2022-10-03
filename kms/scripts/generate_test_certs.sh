@@ -18,6 +18,8 @@ fi
 
 if [[ "$OSTYPE" == "win32" ]]; then
   echo "using local"
+elif [[ "$OSTYPE" == "msys" ]]; then
+  echo "using local"
 else
   cd /opt/workspace
 fi

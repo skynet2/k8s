@@ -21,6 +21,9 @@ configMapGenerator:
 - files:
   - profiles.json
   name: vcs-profile-config
+- files:
+    - clients.json
+  name: vcs-client-config
 
 secretGenerator:
 - envs:

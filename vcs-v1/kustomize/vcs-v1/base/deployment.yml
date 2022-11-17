@@ -23,9 +23,6 @@ spec:
         - name: config
           configMap:
             name: vcs-profile-config
-        - name: config2
-          configMap:
-            name: vcs-client-config
       containers:
       - name: vcs
         envFrom:

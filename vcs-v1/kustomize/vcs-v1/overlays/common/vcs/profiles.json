@@ -29,7 +29,7 @@
                  ],
                  "type": "PermanentResidentCard",
                  "id": "templateID",
-                 "issuer": "bank_issuer"
+                 "issuer": "did:orb:bank_issuer"
               }
            ]
         },

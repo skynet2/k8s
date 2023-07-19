@@ -4,7 +4,7 @@
     "redirect_uris": ["http://127.0.0.1/callback", "trustbloc-wallet://openid4vci/authcodeflow/callback"],
     "grant_types": ["authorization_code"],
     "response_types": ["code"],
-    "scopes": ["openid","profile", "https://login-consent.dev.trustbloc.dev/issuer/bank_issuer/v1.0"],
+    "scopes": ["openid","profile", "https://api-gateway.dev.trustbloc.dev/issuer/bank_issuer/v1.0"],
     "token_endpoint_auth_method": "none"
   }
 ]
